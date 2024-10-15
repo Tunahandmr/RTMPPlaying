@@ -31,7 +31,7 @@ class CameraFragment : Fragment() {
     }
 
     private fun startPlaying() {
-        val url = args.streamUrl ?: "rtmp://10.243.201.170:1935/live/streamkey"
+        val url = args.streamUrl.toString()
         val nodePlayer = NodePlayer(requireContext(), "")
         nodePlayer.attachView(binding.playingLayout)
         nodePlayer.start(url)

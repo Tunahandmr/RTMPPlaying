@@ -25,8 +25,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-            val streamUrl = editTextStreamUrl.text.toString()
             buttonStart.setOnClickListener {
+                val streamUrl = editTextStreamUrl.text.toString()
                 val action = MainFragmentDirections.actionMainFragmentToCameraFragment(streamUrl)
                 Navigation.findNavController(it).navigate(action)
             }
